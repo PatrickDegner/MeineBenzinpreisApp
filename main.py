@@ -26,7 +26,7 @@ def get_zipcode(input_zipcode):
 
 def get_gas_infos(latitude, longitude, gas_type):
 
-    url = f'https://creativecommons.tankerkoenig.de/json/list.php?lat={latitude}&lng={longitude}&rad=5.0&sort=dist&type=all&apikey={api_key}'
+    url = f'https://creativecommons.tankerkoenig.de/json/list.php?lat={latitude}&lng={longitude}&rad=5.0&type=all&apikey={api_key}'
     response = requests.get(url)
     data = response.json()
 
@@ -69,7 +69,7 @@ input1 = input('Enter your zipcode: ')
 input2 = input('Enter your gas type (diesel, super, super plus): ')
 
 if input1 == '':
-    input1 = '33775'
+    input1 = '99998'
 if input2 == '':
     input2 = 'diesel'
 
